@@ -1,6 +1,9 @@
 # flutter_cars
 
-A new Flutter project.
+Simple UI for cars showcase and history
+
+## How to download
+After cloning the project, `run pub get install` to get all the dependencies
 
 ## Getting Started
 
@@ -14,3 +17,8 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## Screenshot
+
+![Home](home.png)
+
