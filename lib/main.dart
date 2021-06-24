@@ -2,10 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter_cars/details.dart';
 
 void main() {
   runApp(MaterialApp(
     home: Home(),
+    routes: {
+      '/details': (context) => Details()
+  },
   ));
 }
 
@@ -163,11 +167,11 @@ class _HomeState extends State<Home> {
                             )
                         )
                     ),
-                    onPressed: () => null
+                    onPressed: (){
+                      Navigator.push(context, FadeRoute(page: Details()));
+                    }
                 ),
               ),
-
-
             ],
           )
         ),
@@ -177,3 +181,25 @@ class _HomeState extends State<Home> {
 }
 
 
+class FadeRoute extends PageRouteBuilder {
+  final Widget page;
+  FadeRoute({required this.page})
+      : super(
+    pageBuilder: (
+        BuildContext context,
+        Animation<double> animation,
+        Animation<double> secondaryAnimation,
+        ) =>
+    page,
+    transitionsBuilder: (
+        BuildContext context,
+        Animation<double> animation,
+        Animation<double> secondaryAnimation,
+        Widget child,
+        ) =>
+        FadeTransition(
+          opacity: animation,
+          child: child,
+        ),
+  );
+}
