@@ -21,4 +21,6 @@ samples, guidance on mobile development, and a full API reference.
 ## Screenshot
 
 ![Home](home.png)
+![Details 1](details_1.png)
+![Details 2](details_2.png)
 
